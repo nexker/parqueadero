@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #7c3aed 100%);
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111827 50%, #0f172a 100%);
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --success: #10b981;
+  --danger: #ef4444;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --white: #ffffff;
+  --card-bg: #ffffff;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --radius: 16px;
+}
+
+body.dark {
+  --text: #e2e8f0;
+  --text-light: #94a3b8;
+  --border: #2d3748;
+  --card-bg: #1a202c;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+body.dark input,
+body.dark select {
+  background: #2d3748;
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+body.dark input::placeholder {
+  color: #718096;
+}
+
+body.dark option {
+  background: #2d3748;
+  color: #e2e8f0;
+}
+
+body.dark .resumen {
+  background: linear-gradient(135deg, #1a202c, #2d3748);
+}
+
+body.dark .resumen h3 {
+  color: #90cdf4;
+}
+
+body.dark .resumen-item {
+  background: #2d3748;
+}
+
+body.dark .resumen-item .value {
+  color: #e2e8f0;
+}
+
+body.dark .resumen-item.highlight .value {
+  color: #63b3ed;
+}
+
+body.dark .btn-refresh {
+  background: #2d3748;
+  color: #e2e8f0;
+  border-color: #4a5568;
+}
+
+body.dark .btn-refresh:hover {
+  background: #4a5568;
+}
+
+body.dark tbody tr:hover td {
+  background: #2d3748;
+}
+
+body.dark td {
+  color: #e2e8f0;
+  border-color: #2d3748;
+}
+
+body.dark .placa-badge {
+  background: #2c3e6b;
+  color: #90cdf4;
+}
+
+body.dark .tipo-carro {
+  background: #1a3a2a;
+  color: #68d391;
+}
+
+body.dark .tipo-moto {
+  background: #3a2a1a;
+  color: #fbd38d;
+}
+
+body.dark .alert-success {
+  background: #1a3a2a;
+  color: #68d391;
+  border-color: #276749;
+}
+
+body.dark .alert-error {
+  background: #3a1a1a;
+  color: #fc8181;
+  border-color: #742a2a;
+}
+body.dark input,
+body.dark select,
+body.dark input:focus,
+body.dark select:focus {
+  background: #2d3748 !important;
+  color: #f7fafc !important;
+  border-color: #4a5568 !important;
+}
+
+body.dark table tbody tr:hover td {
+  background: #2d3748 !important;
+}
+
+body.dark table tbody td {
+  background: #1a202c !important;
+}

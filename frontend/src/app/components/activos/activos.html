@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-header-left">
+      <div class="card-icon">📋</div>
+      <div>
+        <h2>Vehículos Activos <span class="badge">{{ vehiculos.length }}</span></h2>
+        <p>Vehículos actualmente en el parqueadero</p>
+      </div>
+    </div>
+    <button class="btn-refresh" (click)="cargar()">🔄 Actualizar</button>
+  </div>
+
+  <div class="alert-error" *ngIf="error">{{ error }}</div>
+
+  <div class="vacio" *ngIf="vehiculos.length === 0 && !error">
+    <div class="vacio-icon">🅿️</div>
+    <p>No hay vehículos en el parqueadero</p>
+  </div>
+
+  <table *ngIf="vehiculos.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Placa</th>
+        <th>Tipo</th>
+        <th>Fecha Ingreso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let v of vehiculos">
+        <td>#{{ v.id }}</td>
+        <td><span class="placa-badge">{{ v.placa }}</span></td>
+        <td>
+          <span class="tipo-badge" [class.tipo-carro]="v.tipo_vehiculo === 'Carro'" [class.tipo-moto]="v.tipo_vehiculo === 'Moto'">
+            {{ v.tipo_vehiculo === 'Carro' ? '🚗' : '🏍️' }} {{ v.tipo_vehiculo }}
+          </span>
+        </td>
+        <td>{{ v.fecha_ingreso }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

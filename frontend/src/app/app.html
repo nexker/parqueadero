@@ -1,0 +1,31 @@
+<nav class="navbar">
+  <div class="nav-content">
+    <div class="nav-brand">
+      <div class="brand-icon">🅿️</div>
+      <div class="brand-text">
+        <span class="brand-name">Sistema de Parqueadero</span>
+        <span class="brand-sub">Prueba Teorica</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a routerLink="/ingreso" routerLinkActive="active">
+        <span class="nav-icon">🚗</span>
+        <span>Registrar Ingreso</span>
+      </a>
+      <a routerLink="/salida" routerLinkActive="active">
+        <span class="nav-icon">🚪</span>
+        <span>Registrar Salida</span>
+      </a>
+      <a routerLink="/activos" routerLinkActive="active">
+        <span class="nav-icon">📋</span>
+        <span>Vehículos Activos</span>
+      </a>
+      <button class="dark-toggle" (click)="toggleDark()">
+        {{ darkMode ? '☀️' : '🌙' }}
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="page-container">
+  <router-outlet></router-outlet>
+</div>

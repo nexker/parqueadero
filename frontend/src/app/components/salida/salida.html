@@ -1,0 +1,54 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-icon">🚪</div>
+    <div>
+      <h2>Registrar Salida</h2>
+      <p>Procesa la salida y calcula el valor a pagar</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Seleccionar vehículo</label>
+    <select (change)="onVehiculoChange($event)">
+      <option value="">-- Selecciona un vehículo --</option>
+      <option *ngFor="let v of vehiculos" [value]="v.id">
+        {{ v.placa }} — {{ v.tipo_vehiculo }} · Ingreso: {{ v.fecha_ingreso | date:'dd/MM/yyyy HH:mm' }}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Correo electrónico (opcional)</label>
+    <input type="email" [value]="email" (input)="onEmailChange($event)" placeholder="correo@ejemplo.com" />
+  </div>
+
+  <button class="btn btn-danger" (click)="registrarSalida()" [disabled]="cargando">
+    <span>{{ cargando ? '⏳' : '🚪' }}</span>
+    {{ cargando ? 'Procesando...' : 'Registrar Salida' }}
+  </button>
+
+  <div class="alert alert-success" *ngIf="mensaje">{{ mensaje }}</div>
+  <div class="alert alert-error" *ngIf="error">{{ error }}</div>
+
+  <div class="resumen" *ngIf="resultado">
+    <h3>📄 Resumen de cobro</h3>
+    <div class="resumen-grid">
+      <div class="resumen-item">
+        <div class="label">Placa</div>
+        <div class="value">{{ resultado.placa }}</div>
+      </div>
+      <div class="resumen-item">
+        <div class="label">Tipo</div>
+        <div class="value">{{ resultado.tipo_vehiculo }}</div>
+      </div>
+      <div class="resumen-item">
+        <div class="label">Tiempo total</div>
+        <div class="value">{{ resultado.minutos }} min</div>
+      </div>
+      <div class="resumen-item highlight">
+        <div class="label">Valor a pagar</div>
+        <div class="value">${{ resultado.valor | number }}</div>
+      </div>
+    </div>
+  </div>
+</div>
