@@ -87,13 +87,13 @@ def get_vehiculos_activos():
 
 def get_todos_registros():
     """
-    Obtiene todos los registros de parqueo, incluyendo los que ya han salido.
-    Returns:
-        list: Lista de todos los registros.
+    Obtiene el historial completo de ingresos y salidas
+    registrados en el sistema.
     """
     conn = get_connection()
     try:
         with conn.cursor() as cursor:
+            # Ordena los registros desde el más reciente hasta el más antiguo.
             cursor.execute("SELECT * FROM registros ORDER BY fecha_ingreso DESC")
             return cursor.fetchall()
     finally:

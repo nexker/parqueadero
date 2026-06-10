@@ -75,6 +75,7 @@ El frontend corre en `http://localhost:4200`
 | GET | /api/vehiculos/activos | Lista vehículos activos en el parqueadero |
 | POST | /api/vehiculo/ingreso | Registrar ingreso de vehículo |
 | POST | /api/vehiculo/salida/{id} | Registrar salida y calcular cobro |
+| GET | /api/vehiculos | Historial completo de registros |
 
 ### Ejemplo ingreso
 ```json

@@ -1,6 +1,7 @@
 import requests
 import json
-
+# Script de validación para comprobar la autenticación
+# y el envío de correos mediante la API externa.
 BASE_URL = "https://dev-sites.similtech.co/api-email"
 USERNAME = "proceso_pruebas"
 PASSWORD = "das487d32_*"
