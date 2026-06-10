@@ -1,0 +1,111 @@
+{
+  "info": {
+    "_postman_id": "644ab026-6edc-452e-93c3-215f3d447c54",
+    "name": "Parqueadero API",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55758870",
+    "_collection_link": "https://go.postman.co/collection/55758870-644ab026-6edc-452e-93c3-215f3d447c54?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Obtener Vehiculos Activos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/vehiculos/activos",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "vehiculos",
+            "activos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar Ingreso",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tipo_vehiculo\": \"Carro\",\r\n  \"placa\": \"TST001\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/vehiculo/ingreso",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "vehiculo",
+            "ingreso"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar Salida",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"correo@ejemplo.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/vehiculo/salida/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "vehiculo",
+            "salida",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Historial de Registros",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
